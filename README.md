@@ -1,14 +1,190 @@
-# AI Workbench — downloads
+<div align="center">
 
-AI Workbench is a desktop app for working with several AI tools (Claude Code, Codex, OpenCode, Gemini and others)
-side by side and in teams.
+<img src="docs/images/icon.png" width="80" alt="AI Workbench icon" />
 
-**Download:** open [Releases](https://github.com/JackyWein/AI-Workbench-releases/releases/latest) and pick
+# AI Workbench
 
-- `AI-Workbench-<version>-windows-x64.exe`: the installer (recommended; the app updates itself from here)
-- `AI-Workbench-<version>-windows-portable-x64.exe`: runs without installation
+**One calm desktop app for all your AI coding agents.**
 
-The builds are not code-signed yet, so Windows SmartScreen may warn you the first time ("More info" → "Run anyway").
+Claude Code, Codex, Gemini CLI and OpenCode in chats, terminals and teams that work together —
+with your services, your skills, and a small island that tells you when one of them needs you.
 
-The source code is not public. Use and redistribution are covered by the [LICENSE](LICENSE): free to use, and you may
-pass on unchanged copies; no changes, no derived versions, no sale.
+[![Latest release](https://img.shields.io/github/v/release/JackyWein/AI-Workbench-releases?label=release&color=8c9dff)](https://github.com/JackyWein/AI-Workbench-releases/releases/latest)
+![Windows](https://img.shields.io/badge/platform-Windows-5bc8a7)
+
+[**Download**](https://github.com/JackyWein/AI-Workbench-releases/releases/latest) ·
+[How it works](#how-it-works) ·
+[Supported tools](#supported-tools)
+
+</div>
+
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="docs/images/chat-light.png" />
+  <img src="docs/images/chat-dark.png" alt="A conversation with Claude Code about a rounding bug, with the session's tokens, cost and context beside it" />
+</picture>
+
+<sub>The screenshots show demo data: a small shop project and made-up conversations, rendered by the real application.</sub>
+
+## Why
+
+You probably use more than one AI coding tool. Each lives in its own terminal, with its own
+sign-in, its own idea of your project and no idea what the others are doing.
+
+AI Workbench puts them side by side on your projects **without replacing them**. It drives the
+real command line tools you already installed, with the accounts you already signed in to —
+nothing is proxied, scraped or re-sold. On top it adds what none of them has alone: one place for
+your workspaces, teams of agents that hand work to each other, services every agent can use after
+one sign-in, and a quiet companion that tells you when an agent is waiting for you.
+
+**Simple by default. Powerful on demand.**
+
+## What you can do
+
+### Talk to any tool, in any project
+
+A **workspace** is a folder on your computer. Inside it, every **session** is one conversation
+with one tool and model — pick them in the box you type in, and
+switch whenever you like. Answers stream in with their tool calls folded away, code is ready to
+copy, and **+** attaches files and screenshots. The panel beside the chat shows what the session
+has cost so far, from the tool's own numbers; <kbd>Ctrl</kbd> <kbd>`</kbd> opens a shell, the
+files and the git changes of the workspace. Close the app and come back tomorrow: the conversation
+continues where it stopped. Folders on another machine can be opened over SSH, to browse and edit
+their files.
+
+### Run agents side by side
+
+<img src="docs/images/agents.png" alt="Four terminal tiles: tests passing, a dev server, the git history and a request to the server" />
+
+The **Agents** view is a grid of real terminals: the tools' own interactive interfaces or plain
+shells, as many as you need. They keep running when you switch views or close the window, and
+each tile shows what its session used, where the tool reports it. <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>A</kbd> switches
+between chat and agents.
+
+### Let a team work on one goal
+
+<img src="docs/images/team.png" alt="A team of three agents adding a dark mode switch: the goal, a progress bar, the members, a conversation of their work and the plan" />
+
+Pick a **team** in any session and give it a goal. A lead breaks the goal into tasks and hands
+them out; the members — each on the tool and model you chose — work at the same time, ask each
+other questions, publish files, record decisions and report back. You watch it as a
+conversation, follow one member, add a note for the lead, or pause and stop the run. Every run
+has limits (calls, tasks, runtime, failures), so a team cannot burn through an account overnight.
+
+### Never miss an agent that needs you
+
+<img src="docs/images/island.png" alt="The status island: Claude Code wants to run bun test src/cart, with Deny and Allow" />
+
+The **status island** floats above your other windows. It says which agents are working and when
+one has finished — and when one waits for a permission, you answer right there: Claude Code,
+Codex, OpenCode and Gemini CLI each ask through their own permission system, which stays in
+charge. Drag the island to any edge of the screen, or switch it off.
+
+### Give your agents your services — sign in once
+
+<img src="docs/images/connectors.png" alt="The connector catalog: Gmail, Google Calendar, Google Drive, Notion, Linear, GitHub, Sentry, Atlassian and more" />
+
+**Connectors** are the services agents work with: mail, calendars, issues, docs, deployments.
+Choose one, sign in in your browser, and every chat, terminal agent and team can use it — or only
+the workspaces you choose. Your own MCP servers are added the same way. Sign-in tokens stay in
+your system's keychain; the tools reach a service through a small gateway on your computer and
+never see them.
+
+### Teach them how you work
+
+<img src="docs/images/skills.png" alt="Skills: code review, conventional commits, database migrations, React components, release notes and a security check" />
+
+**Skills** are short instructions your agents follow where they apply — how you review a change,
+write a commit, name things. Write one yourself, let one of your tools draft it from a sentence,
+or bring over the skills you already made for Claude Code, Codex, Gemini CLI or OpenCode — a skill
+made for one tool then works for all of them. Switch each on everywhere, per workspace or per
+session.
+
+### Make it look the way you like
+
+<img src="docs/images/themes.png" alt="The same conversation in six themes, each shown light on the left and dark on the right: Quiet, Atelier, Mission Control, Playground, Aurora and Swiss" />
+
+Pick a **theme** under Settings and the whole app changes with it — colours, type, shapes, the
+terminals and the status island: calm **Quiet**, warm **Atelier** with serif headings, dense
+**Mission Control** with lime signals, bold **Playground** with thick outlines, **Aurora** in
+violet and cyan light, and strict black, white and red **Swiss**. Every theme comes **light and
+dark** — the toggle in the sidebar switches, or it follows your system. The status island
+takes on the theme too, down to the shape of its bubble. The typefaces ship with the app, and every
+theme is checked to stay readable in both modes.
+
+## How it works
+
+```mermaid
+flowchart TB
+  ui["<b>Window and status island</b><br/>chats · agent tiles · team view"]
+  core["<b>AI Workbench core</b><br/>sessions · teams · terminals · skills · connectors"]
+  ui -- "typed, validated IPC" --> core
+
+  subgraph tools["Your tools, with your accounts"]
+    direction LR
+    claude["Claude Code"] ~~~ codex["Codex"] ~~~ gemini["Gemini CLI"] ~~~ opencode["OpenCode"] ~~~ compatible["OpenAI-compatible"]
+  end
+
+  core -- "provider adapters" --> tools
+  core -- "MCP gateway" --> services["Connected services<br/>Gmail · GitHub · Linear · …"]
+  core --> storage[("SQLite and keychain<br/>on your computer")]
+```
+
+- **Your tools stay in charge.** Each tool is reached through an adapter that starts the real
+  program the way you would, and turns what it prints into one common stream of events.
+  Permissions, sandboxes and sign-ins remain the tool's own; the app never works around them.
+- **One core for all of them.** Sessions, teams, terminals, skills and connectors never branch on
+  a tool's name. A new tool is an adapter, mostly a profile of its flags and output.
+- **Nothing is invented.** Usage, limits and cost are what the tools report. Where a tool reports
+  nothing, the app says so instead of estimating.
+- **Local and private.** Everything lives in a SQLite database on your computer. Secrets go to
+  the system's keychain — without one, the app refuses to store them rather than writing them in
+  the clear. The window has no access to Node or to your secrets; every request it makes is
+  validated.
+
+## Supported tools
+
+| Tool | Chat sessions | Agent tiles | Status island | Models |
+|---|:---:|:---:|:---:|---|
+| **Claude Code** | ✓ | ✓ | Allow and deny | Claude Code's own model names |
+| **Codex** | ✓ | ✓ | Allow and deny shell commands | The list Codex reports |
+| **Gemini CLI** | ✓ | ✓ | Allow and deny shell commands ¹ | Gemini CLI's model names |
+| **OpenCode** | ✓ | ✓ | Allow, deny and answer questions | Every model OpenCode can reach |
+| **OpenAI-compatible servers** — Ollama, llama.cpp, vLLM, a company gateway | experimental | — | — | The server's list |
+
+¹ After a one-time setup under Providers, which installs a small extension with Gemini CLI's own
+installer.
+
+Each tool's path through the app was checked against the real program, driven by a local
+stand-in model. What a real account adds — its limits and the models it may use — is verified for
+Claude Code; for Codex, OpenCode and Gemini CLI it is not tested yet. A profile for the
+Antigravity CLI ships but is not verified, and the app says so.
+
+## Download
+
+Windows builds are published here; macOS and Linux builds will follow.
+
+Get the latest version from [Releases](https://github.com/JackyWein/AI-Workbench-releases/releases/latest).
+
+| Platform | File | Updates |
+|---|---|---|
+| Windows | `…-windows-x64.exe` (installer) or `…-windows-portable-x64.exe` | The installer updates itself; the portable version tells you |
+
+Updates run in the background: the app checks every hour, downloads a new version by itself and
+installs it the next time it quits — or right away with **Restart to update**. A release counts as
+new by its version or, for the same version, by the commit it was built from, so a version
+published again reaches everyone on it. Switch it off under Settings → About.
+
+The packages are **not code signed** yet, so Windows SmartScreen warns on the first start: choose
+"More info" → "Run anyway". Signed builds will follow.
+
+Install the tools you want to use (Claude Code, Codex, Gemini CLI, OpenCode) and sign in to them
+as usual; AI Workbench finds them on its own and shows what it found under **Providers**.
+
+## License
+
+AI Workbench is **closed source**. You may download it, use it for free (privately or at work), and pass unchanged
+copies on for free. Changing it, building other software on it, and publishing, distributing or selling changed
+versions are not allowed without written permission. The full terms are in [`LICENSE`](LICENSE). Third-party
+components keep their own licenses.
