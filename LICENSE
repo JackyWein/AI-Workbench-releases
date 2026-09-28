@@ -1,0 +1,89 @@
+AI Workbench License
+Source-available, no modifications
+
+Copyright (c) 2025-2026 JackyWein (https://github.com/JackyWein). All rights reserved.
+
+"The Software" means AI Workbench: the source code in this repository, the
+applications built from it (installers, portable builds, updates), and their
+documentation. "You" means any person or organisation that obtains a copy.
+
+1. What you may do
+
+   a. Download, install and use the Software, free of charge, for any lawful
+      purpose, private or commercial.
+   b. Read the source code, and build the Software from it without changes
+      for your own use.
+   c. Make copies of the Software and pass them on, but only unchanged and
+      complete, free of charge, with this license and every copyright notice
+      included. A link to https://github.com/JackyWein/AI-Workbench is the
+      preferred way to share it.
+
+2. What you may not do
+
+   Without the prior written permission of the copyright holder, you may not:
+
+   a. change, adapt, translate or extend the Software, or create any work
+      based on it or on any part of its source code;
+   b. publish, distribute or offer in any other way a changed version, a
+      derived work, or parts of the source code, separately or inside other
+      software;
+   c. sell, rent, lease or sublicense the Software, or charge for passing it
+      on;
+   d. remove or change any copyright, license or attribution notice;
+   e. present the Software, or a copy of it, as your own work or as an
+      official release of someone else.
+
+3. Forks on GitHub
+
+   GitHub's Terms of Service let GitHub users view public repositories and
+   copy them within GitHub, for example by forking. That is permitted to the
+   extent those terms require. A fork is a copy: this license grants no right
+   to change it, to publish changes made in it, or to distribute it outside
+   GitHub other than as allowed in section 1.
+
+4. Contributions
+
+   Issues and suggestions are welcome. Code contributions are accepted only
+   by prior agreement. By submitting any, you agree that the copyright holder
+   may use, change and license them as part of the Software without
+   restriction.
+
+5. Third-party components
+
+   The Software includes and depends on third-party components (for example
+   the packages installed from npm and the icon sets listed in
+   packages/ui/src/LOGOS-LICENSE.md). Each remains under its own license,
+   which this license does not change, limit or replace. Trademarks and
+   logos belong to their owners.
+
+6. No warranty
+
+   The Software is provided "as is", without warranty of any kind, express
+   or implied, including the warranties of merchantability, fitness for a
+   particular purpose and non-infringement. It connects to AI tools and
+   services and can read, change and run files and commands with the
+   permissions you give it. You use it at your own risk.
+
+7. Limitation of liability
+
+   To the extent permitted by applicable law, the copyright holder is not
+   liable for any damages or other liability arising from the use of, or the
+   inability to use, the Software. Liability for intent and gross negligence
+   remains as mandatory law provides.
+
+8. Termination
+
+   Any use beyond this license, or any breach of it, ends your rights under
+   it immediately. Sections 2, 5, 6 and 7 continue to apply.
+
+9. Everything else
+
+   All rights not expressly granted here are reserved. The copyright holder
+   may license the Software under other terms, and may change these terms
+   for future versions; a copy you already received stays under the terms it
+   came with. The law of the Federal Republic of Germany applies, as far as
+   this is permitted.
+
+For permission to do anything this license does not allow, open an issue at
+https://github.com/JackyWein/AI-Workbench or contact the copyright holder
+through GitHub.
